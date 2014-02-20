@@ -7,6 +7,20 @@ class {'apt':
 	always_apt_update => true,
 }
 
+if $::phpv == "php54" {
+	apt::key { '4F4EA0AAE5267A6C': }
+
+	apt::ppa { 'ppa:ondrej/php5-oldstable':
+		require => Apt::Key['4F4EA0AAE5267A6C']
+	}
+} elsif $::phpv == "php55" {
+	apt::key { '4F4EA0AAE5267A6C': }
+
+	apt::ppa { 'ppa:ondrej/php5':
+		require => Apt::Key['4F4EA0AAE5267A6C']
+	}
+}
+
 # install packages
 package { [
 		'build-essential',

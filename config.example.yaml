@@ -1,18 +1,21 @@
 webapp1:
     ip: "192.168.254.250"
     path: "../webapp1"
+    phpv: "php53"
     website:
         name: "webapp1"
         vhost: "/vagrant/manifests/vhosts/webapp1.conf"
 webapp2:
     ip: "192.168.254.251"
     path: "../webapp2"
+    phpv: "php54"
     website:
         name: "webapp2"
         vhost: "/vagrant/manifests/vhosts/webapp2.conf"
 webapp3:
     ip: "192.168.254.252"
     path: "../webapp3"
+    phpv: "php55"
     website:
         name: "webapp3"
         vhost: "/vagrant/manifests/vhosts/webapp3.conf"

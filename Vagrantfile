@@ -77,7 +77,8 @@ Vagrant.configure("2") do |config|
 				puppet.manifest_file  = "selamp.pp"
 				puppet.facter = {
 					"website" => site_configuration['website']['name'],
-					"vhost" => site_configuration['website']['vhost']
+					"vhost" => site_configuration['website']['vhost'],
+					"phpv" => site_configuration['phpv']
 				}
 			end
 		end
