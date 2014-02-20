@@ -173,7 +173,7 @@ puphpet::ini { 'xhprof':
 puphpet::ini { 'php':
 	value	=> [
 		'date.timezone = "Europe/Brussels"',
-		'session.name = BSID'
+		'session.name = PHPSESSID'
 	],
 	ini		=> '/etc/php5/conf.d/zzz_php.ini',
 	notify	=> Service['apache'],
