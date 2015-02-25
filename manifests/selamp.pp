@@ -28,7 +28,8 @@ package { [
 		'curl',
 		'htop',
 		'git-core',
-		'graphviz'
+		'graphviz',
+		'imagemagick'
 	]:
 	ensure	=> 'installed',
 }
