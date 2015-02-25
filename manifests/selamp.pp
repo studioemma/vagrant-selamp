@@ -49,6 +49,12 @@ apache::vhost { "${::website}":
 	priority => '01',
 }
 
+# Remove the default apache site conf
+file { '/etc/apache2/sites-enabled/000-default':
+  ensure => absent,
+  require => Package['apache2'],
+}
+
 # run apache under vagrant user
 file { "/var/lock/apache2":
 	ensure  => present,
